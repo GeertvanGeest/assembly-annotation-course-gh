@@ -1,4 +1,16 @@
-## Download the reads 
+## Using software
+
+On the IBU cluster software is available in modules or containers. More info on how to use modules [here](https://doc.bioinformatics.unibe.ch/cluster_wiki/HPC_tutorial/SLURM_tutorial/#4-modules). If you need software, try to find it at the [vital-it website](https://www.vital-it.ch/services). You can load the software modules with `module add [PATH]`, to make it available:
+
+```sh
+module add UHTS/Quality_control/fastqc/0.11.9
+fastqc --help
+```
+
+## Raw input reads
+
+!!! bug "work to be done here"
+    We will probably make the reads available in a central place (and have multiple accessions). 
 
 PacBio reads of Ler are at ERR3415825  and ERR3415826
 
@@ -38,16 +50,7 @@ do
 done
 ```
 
-## Using software
 
-On the IBU cluster software is available in modules or containers. More info on how to use modules [here](https://doc.bioinformatics.unibe.ch/cluster_wiki/HPC_tutorial/SLURM_tutorial/#4-modules). If you need software, try to find it at the [vital-it website](https://www.vital-it.ch/services). It will either be a module, which you can load with `module add [PATH]`, e.g.:
-
-```sh
-module add UHTS/Quality_control/fastqc/0.11.9
-fastqc --help
-```
-
-or a container, which you can also find at the vital-it website (more information on that in [week3](week3.md)). 
 
 ## Basic read statistics
 

@@ -1,7 +1,6 @@
 site_name: Assembly and annotation course
 nav:
     - Home: index.md
-    - Precourse preparations: precourse.md
     - Course schedule: course_schedule.md
     - Exercises: 
       - Assembly: 
@@ -9,14 +8,15 @@ nav:
         - Week 2 - assembly: Assembly/week2.md
         - Week 3 - assembly evaluation: Assembly/week3.md
         - Week 4 - comparing genomes: Assembly/week4.md
-      - Annotation
+      - Annotation:
+        - Week 5: Annotation/week5.md
 
 theme:
   name: material
 
 # Repository
-repo_name: sib-swiss/course_website_template
-repo_url: https://github.com/sib-swiss/course_website_template
+repo_name: GeertvanGeest/assembly-annotation-course
+repo_url: https://GeertvanGeest.github.io/assembly-annotation-course/
 
 markdown_extensions:
   - abbr
