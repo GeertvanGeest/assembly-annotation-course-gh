@@ -9,61 +9,67 @@ fastqc --help
 
 ## Raw input reads
 
-!!! bug "work to be done here"
-    We will probably make the reads available in a central place (and have multiple accessions). 
+You can find the input reads at `/data/courses/assembly-annotation-course`. Each group gets appointed a separate accession (i.e. genotype) and each person gets assigned a separate dataset within an accession. 
 
-PacBio reads of Ler are at ERR3415825  and ERR3415826
+Find the directory with your dataset like this:
 
-```sh
-module add UHTS/Analysis/sratoolkit/2.10.7
-
-for SRA_ID in ERR3415825 ERR3415826
-do
-  prefetch $SRA_ID
-  fastq-dump \
-  --gzip \
-  $SRA_ID
-done
+```
+/data/courses/assembly-annotation-course/[ACCESSION]/[DATASET]
 ```
 
-The whole genome Illumina reads of Ler:
+The directory contains the following subdirectories + files (this is an example for An-1):
 
-
-```sh
-prefetch ERR3624574
-fastq-dump \
---gzip \
---defline-seq '@$sn[_$rn]/$ri' \
---split-files ERR3624574 
+```
+.
+├── Illumina
+│   ├── ERR3624579_1.fastq.gz
+│   └── ERR3624579_2.fastq.gz
+├── pacbio
+│   └── ERR3415817.fastq.gz
+└── RNAseq
+    ├── ERR754061_1.fastq.gz
+    ├── ERR754061_2.fastq.gz
+    └── runinfo_ERS657083.csv
 ```
 
-Download also Illumina the paired-end RNA-seq reads of Ler:
+Containing three sequencing datasets: 
+
+- Whole genome Illumina (`Illumina`) 
+- Whole genome PacBio (`pacbio`) 
+- Whole transcriptome Illumina RNA-seq (`RNAseq`)
+
+Generate a working directory for this course in your data directory at `/data/users/[USERNAME]/assembly_annotation_course`. After that, generate a soft link to the directory with reads to get easy access:
 
 ```sh
-for SRA_ID in SRR5230991 SRR5230992 SRR5230993
-do
-  prefetch $SRA_ID
-  fastq-dump \
-  --gzip \
-  --defline-seq '@$sn[_$rn]/$ri' \
-  --split-files $SRA_ID
-done
+cd /data/users/[USERNAME]/assembly_annotation_course
+ln -s /data/courses/assembly-annotation-course/[ACCESSION]/[DATASET]/ ./
 ```
-
-
 
 ## Basic read statistics
 
-You have the following reads available:
-
-- Whole genome PacBio reads
-- Whole genome Illumina reads
-- Whole transcriptome Illumina reads 
+In this first exercise you will get acquainted with the different datasets and run some basic QC on them. 
 
 **Exercise:** Run `fastqc` on each of the fastq files. To do this, first look up the required module at [https://www.vital-it.ch/services](https://www.vital-it.ch/services), and create a script to run `fastqc` using SLURM's `sbatch`. 
 
 !!! note "using SLURM"
     A tutorial about job submission using SLURM on the IBU cluster you can find [here](https://doc.bioinformatics.unibe.ch/cluster_wiki/HPC_tutorial/SLURM_tutorial/). 
+
+!!! hint "Work structured!"
+    You will use the same dataset throughout this course. Since your building further on your results it is important to keep track of the commands you have run. Therefore, it makes sense to have a directory `scripts` in your working directory (i.e. `/data/users/[USERNAME]/assembly_annotation_course`). In addition, it also helps to keep files related to the same step in the process in the same directory. A directory structure of your working directory could therefore look like this:
+
+    ```
+    .
+    ├── assemblies
+    │   ├── canu
+    │   ├── flye
+    │   └── Trinity
+    ├── read_QC
+    │   ├── fastqc
+    │   └── kmer_counting
+    └── scripts
+        ├── 01_read_statistics.sh
+        └── 02_kmer_counting.sh
+    ```
 
 **Questions:**
 

@@ -16,7 +16,7 @@ theme:
 
 # Repository
 repo_name: GeertvanGeest/assembly-annotation-course
-repo_url: https://github.com/GeertvanGeest/assembly-annotation-course
+repo_url: https://gitlab.bioinformatics.unibe.ch/gvangeest/assembly-annotation-course
 
 markdown_extensions:
   - abbr
