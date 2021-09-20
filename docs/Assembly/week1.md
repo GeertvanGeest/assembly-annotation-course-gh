@@ -1,11 +1,4 @@
-## Using software
 
-On the IBU cluster software is available in modules or containers. More info on how to use modules [here](https://doc.bioinformatics.unibe.ch/cluster_wiki/HPC_tutorial/SLURM_tutorial/#4-modules). If you need software, try to find it at the [vital-it website](https://www.vital-it.ch/services). You can load the software modules with `module add [PATH]`, to make it available:
-
-```sh
-module add UHTS/Quality_control/fastqc/0.11.9
-fastqc --help
-```
 
 ## Raw input reads
 
