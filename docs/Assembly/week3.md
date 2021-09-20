@@ -52,7 +52,30 @@ And submit it with:
 sbatch merqury.sh
 ```
 
-## quast
+## Assessing quality with BUSCO 
+
+[BUSCO](https://busco.ezlab.org/) uses gene sets that are expected to be 'universal' and single-copy among groups of organisms. This means that from such a gene set, you should be able to find most of them only once in your assembly. If you only find a few, it probably means your assembly does not represent the complete genome/transcriptome, if you find many in multiple times, your assembly probably contains a lot of sequences that should be merged. 
+
+**Exercise:** Run BUSCO on each of your assemblies (i.e. whole genome with `flye` and `canu`, and transcriptome generated with `Trinity`). As the lineage you can use `brassicales_odb10`. You can use the following container:
+
+```
+/data/courses/assembly-annotation-course/containers/busco_5.1.3--pyhdfd78af_0.sif
+```
+
+!!! hint "Options to use"
+    Before you start running the program, check out the helper (`busco --help`) and have a look in particular at the following options:
+
+    - `--mode`
+    - `--lineage`
+    - `--cpu`
+
+**Questions:**
+
+- How do your genome assemblies look according to your BUSCO results? Is one genome assembly better than the other? 
+- How does your transcriptome assembly look? Are there many duplicated genes? Can you explain the differences with the whole genome assemblies?
+
+
+## Assessing quality of quast
 
 ```sh
 #!/usr/bin/env bash
@@ -87,41 +110,7 @@ $PROJDIR/assemblies/flye.fasta \
 $PROJDIR/assemblies/canu.fasta
 ```
 
-## Run BUSCO 
 
-```sh 
-#!/usr/bin/env bash
-
-#SBATCH --mail-user=geert.vangeest@bioinformatics.unibe.ch
-#SBATCH --mail-type=end,fail
-#SBATCH --time=1-00:00:00
-#SBATCH --mem-per-cpu=4G
-#SBATCH --cpus-per-task=12
-#SBATCH --output=/data/projects/p651_Assembly_and_annotation_course_2021/assembly_Ler/log/busco_flye_output_%j.txt
-#SBATCH --error=/data/projects/p651_Assembly_and_annotation_course_2021/assembly_Ler/log/busco_flye_error_%j.txt
-#SBATCH --job-name=p651_busco
-#SBATCH --partition=pall
-
-# module add UHTS/Analysis/busco/4.1.4
-
-PROJDIR=/data/projects/p651_Assembly_and_annotation_course_2021/assembly_Ler
-# export AUGUSTUS_CONFIG_PATH=$PROJDIR/augustus_config
-
-# brassicales_odb10
-
-singularity run \
---bind $PROJDIR \
-$PROJDIR/../containers/busco_5.1.3--pyhdfd78af_0.sif \
-busco \
--i $PROJDIR/Ler-deNovoAssembly_flye/assembly.fasta \
--l brassicales_odb10 \
--o BUSCO \
--m genome \
---cpu ${SLURM_CPUS_PER_TASK} \
---out_path $PROJDIR/Ler-deNovoAssembly_flye/ \
---download_path $PROJDIR \
---force
-```
 
 ## merqury 
 
