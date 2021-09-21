@@ -22,9 +22,7 @@ The directory contains the following subdirectories + files (this is an example 
 │   └── ERR3415818.fastq.gz
 └── RNAseq
     ├── ERR754061_1.fastq.gz
-    ├── ERR754061_2.fastq.gz
-    ├── runinfo_1.fastq.gz
-    └── runinfo_2.fastq.gz
+    └── ERR754061_2.fastq.gz
 ```
 
 Containing three sequencing datasets: 
