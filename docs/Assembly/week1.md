@@ -18,11 +18,13 @@ The directory contains the following subdirectories + files (this is an example 
 │   ├── ERR3624579_1.fastq.gz
 │   └── ERR3624579_2.fastq.gz
 ├── pacbio
-│   └── ERR3415817.fastq.gz
+│   ├── ERR3415817.fastq.gz
+│   └── ERR3415818.fastq.gz
 └── RNAseq
     ├── ERR754061_1.fastq.gz
     ├── ERR754061_2.fastq.gz
-    └── runinfo_ERS657083.csv
+    ├── runinfo_1.fastq.gz
+    └── runinfo_2.fastq.gz
 ```
 
 Containing three sequencing datasets: 
