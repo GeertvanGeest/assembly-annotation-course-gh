@@ -3,11 +3,11 @@
 
 **Lecture 1: introduction to genome assembly**
 
-[:fontawesome-solid-file-pdf: Download the presentation](../assets/pdf/general_introduction.pdf){: .md-button }
+[:fontawesome-solid-file-pdf: Download the presentation](../assets/pdf/20210922_Assembly_MSc_Course_Lecture_1_handout.pdf){: .md-button }
 
 **Lecture 2: generating sequencing reads**
 
-[:fontawesome-solid-file-pdf: Download the presentation](../assets/pdf/general_introduction.pdf){: .md-button }
+[:fontawesome-solid-file-pdf: Download the presentation](../assets/pdf/20210922_Assembly_MSc_Course_Lecture_2_handout.pdf){: .md-button }
 
 
 ## Raw input reads
