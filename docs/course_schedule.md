@@ -2,11 +2,11 @@
 
 | block   	| start    	| end      	| subject                                      	|
 |---------	|----------	|----------	|----------------------------------------------	|
-| block 1 	| 9:15 AM  	| 10:45 AM 	| [Lecture 1: introduction to genome assembly]((../assets/pdf/20210922_Assembly_MSc_Course_Lecture_1_handout.pdf))   	|
+| block 1 	| 9:15 AM  	| 10:45 AM 	| [Lecture 1: introduction to genome assembly](../assets/pdf/20210922_Assembly_MSc_Course_Lecture_1_handout.pdf)   	|
 |         	| 10:45 AM 	| 11:00 AM 	| break                                        	|
 | block 2 	| 11:00 AM 	| 12:30 PM 	| Exercises: access reads and perform basic QC 	|
 |         	| 12:30 PM 	| 1:30 PM  	| break                                             	|
-| block 3 	| 1:30 PM  	| 3:00 PM  	| [Lecture 2: generating sequencing reads]((../assets/pdf/20210922_Assembly_MSc_Course_Lecture_2_handout.pdf))      	|
+| block 3 	| 1:30 PM  	| 3:00 PM  	| [Lecture 2: generating sequencing reads](../assets/pdf/20210922_Assembly_MSc_Course_Lecture_2_handout.pdf)     	|
 |         	| 3:00 PM  	| 3:30 PM  	| break                                             	|
 | block 4 	| 4:00 PM  	| 5:00 PM  	| Exercises: kmer analysis                     	|
 
