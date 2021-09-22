@@ -1,6 +1,6 @@
 # Course website assembly and annotation course
 
-Hosted at https://GeertvanGeest.github.io/assembly-annotation-course/ 
+Hosted at https://GeertvanGeest.github.io/assembly-annotation-course-gh/ 
 
 This website is generated with [MkDocs](https://www.mkdocs.org/), with the theme [Material](https://squidfunk.github.io/mkdocs-material/).
 
