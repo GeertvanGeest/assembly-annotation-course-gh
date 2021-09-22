@@ -1,6 +1,20 @@
 
+## Material
+
+**Lecture 1: introduction to genome assembly**
+
+[:fontawesome-solid-file-pdf: Download the presentation](../assets/pdf/general_introduction.pdf){: .md-button }
+
+**Lecture 2: generating sequencing reads**
+
+[:fontawesome-solid-file-pdf: Download the presentation](../assets/pdf/general_introduction.pdf){: .md-button }
+
 
 ## Raw input reads
+
+During this course we will work with raw data from:
+
+Jiao WB, Schneeberger K. **Chromosome-level assemblies of multiple Arabidopsis genomes reveal hotspots of rearrangements with altered evolutionary dynamics.** Nature Communications. 2020;11:1–10. Available from: [http://dx.doi.org/10.1038/s41467-020-14779-y](http://dx.doi.org/10.1038/s41467-020-14779-y)
 
 You can find the input reads at `/data/courses/assembly-annotation-course`. Each group gets appointed a separate accession (i.e. genotype) and each person gets assigned a separate dataset within an accession. 
 
